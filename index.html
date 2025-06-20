@@ -1,76 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta info and Google Fonts -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lee Minho Portfolio</title>
-  <!-- Google Font: Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- External stylesheet -->
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header / Hero section -->
-  <header>
+  <!-- 1. COVER PAGE -->
+  <header class="cover-page">
+    <img src="images/profile.jpg" alt="Professional Photo" class="profile-pic" />
     <h1>Lee Minho</h1>
-    <p>Web Developer</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="resume.pdf" download>Resume</a>
-    </nav>
+    <p>B.Sc. in Computer Science</p>
+    <p>Email: leeminho@example.com | Phone: 123-456-7890</p>
+    <p>
+      <a href="https://linkedin.com/in/leeminho" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/leeminho" target="_blank">GitHub</a> |
+      <a href="#">Portfolio</a>
+    </p>
   </header>
 
-  <!-- About Section -->
+  <!-- 2. ABOUT ME -->
   <section id="about" class="reveal">
     <h2>About Me</h2>
-    <p>Hi! I’m Lee Minho, a beginner web developer who loves creating clean and simple websites. This portfolio is built using HTML, CSS, and JavaScript.</p>
+    <p>
+      I am a passionate computer science student who loves building clean, interactive, and user-friendly websites.
+      My interests lie in full-stack development and UI/UX design. I believe in simplicity and functionality.
+    </p>
+    <blockquote>"Code is like humor. When you have to explain it, it’s bad." – Cory House</blockquote>
   </section>
 
-  <!-- Projects Section -->
+  <!-- 3. EDUCATION -->
+  <section id="education" class="reveal">
+    <h2>Education</h2>
+    <p><strong>XYZ University</strong> – B.Sc. in Computer Science (Expected: May 2026)</p>
+    <p>GPA: 3.8</p>
+    <ul>
+      <li>Courses: Data Structures, Algorithms, Web Development, DBMS</li>
+      <li>Dean’s List 2024–2025</li>
+    </ul>
+  </section>
+
+  <!-- 4. SKILLS -->
+  <section id="skills" class="reveal">
+    <h2>Skills</h2>
+    <h3>Technical Skills</h3>
+    <ul class="skills-list">
+      <li>HTML, CSS, JavaScript, Python, Java</li>
+      <li>React, Node.js, MySQL, Git</li>
+    </ul>
+    <h3>Soft Skills</h3>
+    <ul class="skills-list">
+      <li>Communication</li>
+      <li>Teamwork</li>
+      <li>Problem-solving</li>
+    </ul>
+  </section>
+
+  <!-- 5. PROJECTS -->
   <section id="projects" class="reveal">
     <h2>Projects</h2>
     <div class="project-gallery">
-      <!-- Project 1 -->
       <div class="project-card">
-        <img src="images/project1.jpg" alt="Project 1">
         <h3>Portfolio Website</h3>
-        <p>A personal portfolio site showcasing my skills and projects.</p>
+        <p>A personal portfolio to showcase my work and skills.</p>
+        <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+        <a href="https://github.com/leeminho/portfolio" target="_blank">GitHub</a>
       </div>
-      <!-- Project 2 -->
       <div class="project-card">
-        <img src="images/project2.jpg" alt="Project 2">
-        <h3>ToDo App</h3>
-        <p>A simple ToDo list app built using HTML, CSS, and JavaScript.</p>
+        <h3>Todo App</h3>
+        <p>A web app to manage daily tasks with dynamic UI.</p>
+        <p><strong>Tools:</strong> JavaScript, LocalStorage</p>
+        <a href="https://github.com/leeminho/todo-app" target="_blank">GitHub</a>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- 6. CERTIFICATIONS & ACHIEVEMENTS -->
+  <section id="certifications" class="reveal">
+    <h2>Certifications & Achievements</h2>
+    <ul>
+      <li>Frontend Development - freeCodeCamp (2024)</li>
+      <li>2nd Place - University Hackathon (2023)</li>
+      <li>Merit Scholarship Recipient - XYZ University (2022)</li>
+    </ul>
+  </section>
+
+  <!-- 7. CONTACT INFO (REPEATED) -->
   <section id="contact" class="reveal">
     <h2>Contact Me</h2>
+    <p>Email: leeminho@example.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/leeminho" target="_blank">linkedin.com/in/leeminho</a></p>
+    <p>GitHub: <a href="https://github.com/leeminho" target="_blank">github.com/leeminho</a></p>
     <form id="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
       <textarea placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 Lee Minho</p>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
-</body>
-</html>
-
-  <!-- Link to JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>
