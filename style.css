@@ -1,134 +1,168 @@
-/* Default theme colors using CSS variables */
-:root {
-  --bg: #f9f9f9;
-  --text: #333;
-  --card-bg: #fff;
-}
-
-/* Dark mode overrides */
-body.dark {
-  --bg: #121212;
-  --text: #f1f1f1;
-  --card-bg: #1e1e1e;
-}
-
-/* Reset and box model */
+/* ---------------------------
+   General Reset and Theme
+--------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body styles */
+/* Use a clean Google Font */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  background-color: #fefefe;
+  color: #333;
   padding: 20px;
-  transition: background 0.3s, color 0.3s;
+  line-height: 1.6;
 }
 
-/* Header and navigation styles */
+/* ---------------------------
+   Header / Navigation
+--------------------------- */
 header {
   text-align: center;
-  padding: 30px 0;
+  padding: 40px 0;
+  background-color: #f0f4ff;
+  border-radius: 12px;
+  margin-bottom: 30px;
 }
 
+/* Name and title */
+header h1 {
+  font-size: 2.5em;
+  color: #1a73e8;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 8px;
+}
+
+/* Navigation links */
 nav {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-/* Navigation links and buttons */
-nav a,
-nav button {
-  margin: 0 10px;
+nav a {
+  margin: 0 15px;
   text-decoration: none;
-  color: var(--text);
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
+  color: #1a73e8;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
-/* Section spacing */
+nav a:hover {
+  color: #0b47a1;
+}
+
+/* ---------------------------
+   Sections (About, Projects, Contact)
+--------------------------- */
 section {
-  margin: 40px 0;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 60px;
+  padding: 20px;
+  border-radius: 12px;
 }
 
-/* Layout for project gallery */
+/* Section headings */
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #1a73e8;
+}
+
+/* ---------------------------
+   Project Cards
+--------------------------- */
 .project-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
-/* Individual project card */
 .project-card {
-  background: var(--card-bg);
+  background: #fff;
+  width: 100%;
+  max-width: 400px;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  overflow: hidden;
-  width: calc(50% - 10px);
-  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  text-align: center;
   transition: transform 0.3s;
 }
 
-/* Hover animation on project card */
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.03);
 }
 
-/* Project image styles */
 .project-card img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-/* Contact form input and textarea styles */
+/* ---------------------------
+   Contact Form
+--------------------------- */
 form input,
 form textarea {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;
+  padding: 12px;
+  margin-bottom: 12px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 1em;
 }
 
-/* Submit button styles */
-button[type="submit"] {
-  background-color: #333;
+/* Submit button style */
+form button {
+  padding: 10px 25px;
+  background-color: #1a73e8;
   color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
 }
 
-/* Footer styles */
+form button:hover {
+  background-color: #0b47a1;
+}
+
+/* ---------------------------
+   Footer
+--------------------------- */
 footer {
   text-align: center;
-  margin-top: 60px;
-  padding: 20px;
+  padding: 20px 0;
+  font-size: 0.9em;
+  color: #888;
 }
 
-/* Responsive layout for smaller screens */
-@media (max-width: 768px) {
-  .project-card {
-    width: 100%;
-  }
-}
-
-/* Reveal animation for scroll effect */
+/* ---------------------------
+   Reveal animation (on scroll)
+--------------------------- */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
 }
 
-/* When the element is active (scrolled into view) */
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ---------------------------
+   Responsive Design
+--------------------------- */
+@media (max-width: 768px) {
+  .project-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
 }
