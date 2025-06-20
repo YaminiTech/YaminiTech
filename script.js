@@ -1,11 +1,11 @@
-// 📩 Handle contact form submission
+// 📩 Handle contact form submission with a simple alert
 document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent default form behavior (page reload)
+  e.preventDefault(); // Prevent page reload
   alert("Thank you! Your message has been sent.");
-  this.reset(); // Clear the form fields
+  this.reset(); // Clear form
 });
 
-// 🎯 Scroll reveal animation for sections
+// 💫 Reveal sections on scroll
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
@@ -13,17 +13,11 @@ function revealOnScroll() {
     const windowHeight = window.innerHeight;
     const elementTop = el.getBoundingClientRect().top;
     if (elementTop < windowHeight - 100) {
-      el.classList.add("active"); // Add active class when in view
+      el.classList.add("active");
     }
   }
 }
 
-// Run reveal function on scroll and page load
+// Run on scroll and page load
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
-
-// 🌗 Dark/light mode toggle
-document.getElementById("toggle-mode").addEventListener("click", () => {
-  document.body.classList.toggle("dark"); // Toggle dark class on body
-});
-
