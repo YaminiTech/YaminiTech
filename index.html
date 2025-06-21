@@ -104,18 +104,26 @@ a course of study offered by RaspberryPiFoundation</li>
       <textarea placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>-->
-    <form  action="https://formspree.io/f/mblyapne"  method="POST" id="contact-form">
-    <input type="text" placeholder="Your Name" required />
+<!-- ✅ Formspree-powered contact form -->
+<form action="https://formspree.io/f/mblyapne" method="POST">
   <label>
-    Your email:
-    <input type="email" name="email">
+    Your Name:
+    <input type="text" name="name" placeholder="Your Name" required>
   </label>
+
   <label>
-    Your message:
-    <textarea name="message"></textarea>
+    Your Email:
+    <input type="email" name="email" placeholder="Your Email" required>
   </label>
+
+  <label>
+    Your Message:
+    <textarea name="message" placeholder="Your Message" required></textarea>
+  </label>
+
   <button type="submit">Send</button>
 </form>
+
   </section>
 
   <footer>
