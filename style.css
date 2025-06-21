@@ -1,5 +1,5 @@
 /* ------------------------
-   Global Reset & Font 
+   Global Reset & Font
 --------------------------- */
 * {
   margin: 0;
@@ -12,15 +12,22 @@ body {
   background-color: #ffffff;
   color: #333;
   line-height: 1.6;
-  padding: 20px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
 }
 
 /* ------------------------
-   COVER PAGE (Header)
+   Left Panel (Sidebar)
 --------------------------- */
-.cover-page {
-  text-align: center;
-  margin-bottom: 40px;
+.left-panel {
+  width: 35%;
+  background-color: #222;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-pic {
@@ -28,65 +35,89 @@ body {
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #0077cc;
+  border: 4px solid white;
   margin-bottom: 15px;
 }
 
-.cover-page h1 {
-  font-size: 2.5rem;
-  color: #0077cc;
+.left-panel h1 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 5px;
 }
 
-.cover-page p {
-  margin: 6px 0;
+.left-panel .title {
   font-size: 1rem;
+  margin-bottom: 20px;
 }
 
-.cover-page a {
-  color: #0077cc;
+.left-panel section {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.left-panel h3 {
+  border-bottom: 1px solid #444;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.left-panel ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.left-panel li {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.left-panel a {
+  color: #4db8ff;
   text-decoration: none;
-  font-weight: 500;
 }
 
-.cover-page a:hover {
+.left-panel a:hover {
   text-decoration: underline;
 }
 
 /* ------------------------
-   Section Headings & Layout
+   Right Panel (Main Content)
 --------------------------- */
-section {
-  margin: 50px auto;
-  max-width: 800px;
-  padding: 20px;
+.right-panel {
+  width: 65%;
+  padding: 40px;
 }
 
-section h2 {
-  font-size: 1.8rem;
+.right-panel section {
+  margin-bottom: 40px;
+}
+
+.right-panel h2 {
+  font-size: 1.6rem;
   color: #0077cc;
   margin-bottom: 15px;
 }
 
-section h3 {
+.right-panel h3 {
   font-size: 1.2rem;
   margin: 10px 0;
 }
 
 /* ------------------------
-   Paragraphs and Lists
+   Text & Lists
 --------------------------- */
 p, li {
   font-size: 1rem;
   margin-bottom: 8px;
 }
 
-ul {
-  padding-left: 20px;
+ul.skills-list {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 15px;
 }
 
-/* ------------------------
-   Blockquote for Quotes
---------------------------- */
 blockquote {
   font-style: italic;
   background: #f0f8ff;
@@ -97,48 +128,19 @@ blockquote {
 }
 
 /* ------------------------
-   Skills Section
---------------------------- */
-.skills-list {
-  list-style: disc;
-  margin-bottom: 20px;
-}
-
-/* ------------------------
    Projects Section
 --------------------------- */
-.project-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+.right-panel ul {
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
-.project-card {
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  padding: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.project-card h3 {
+.right-panel a {
   color: #0077cc;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-weight: 500;
 }
 
-.project-card a {
-  color: #0077cc;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.project-card a:hover {
+.right-panel a:hover {
   text-decoration: underline;
 }
 
@@ -182,7 +184,7 @@ footer {
 }
 
 /* ------------------------
-   Scroll Reveal Effect
+   Scroll Reveal Animation
 --------------------------- */
 .reveal {
   opacity: 0;
@@ -196,16 +198,30 @@ footer {
 }
 
 /* ------------------------
-   Responsive Fixes
+   Responsive Design
 --------------------------- */
 @media (max-width: 768px) {
-  .project-gallery {
-    grid-template-columns: 1fr;
+  body {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+
+  .left-panel {
+    padding: 30px 20px;
+    align-items: flex-start;
   }
 
   .profile-pic {
     width: 120px;
     height: 120px;
+  }
+
+  .left-panel h1, .left-panel .title {
+    text-align: left;
   }
 }
 
