@@ -1,9 +1,9 @@
 // 📩 Handle contact form submission
-document.getElementById("contact-form").addEventListener("submit", function (e) {
+/*document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault(); // Prevents page from reloading
   alert("Thanks! Your message has been sent.");
   this.reset(); // Clears the form inputs
-});
+});*/
 
 // 🎯 Scroll reveal for all sections with class "reveal"
 const reveals = document.querySelectorAll(".reveal");
